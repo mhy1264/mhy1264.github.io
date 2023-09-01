@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Leetcode on Huan&#39;s Blog</title>
+    <link>https://mhy1264.github.io/tags/leetcode/</link>
+    <description>Recent content in Leetcode on Huan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mhy1264.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 804. Unique Morse Code Words</title>
+      <link>https://mhy1264.github.io/post/leetcode-804/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/leetcode-804/</guid>
+      <description>題目敘述 International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
+&amp;lsquo;a&amp;rsquo; maps to &amp;ldquo;.-&amp;rdquo;, &amp;lsquo;b&amp;rsquo; maps to &amp;ldquo;-&amp;hellip;&amp;rdquo;, &amp;lsquo;c&amp;rsquo; maps to &amp;ldquo;-.-.&amp;rdquo;, and so on. For convenience, the full table for the 26 letters of the English alphabet is given below:
+[&amp;quot;.-&amp;quot;,&amp;quot;-&amp;hellip;&amp;quot;,&amp;quot;-.-.&amp;quot;,&amp;quot;-..&amp;quot;,&amp;quot;.&amp;quot;,&amp;quot;..-.&amp;quot;,&amp;quot;&amp;ndash;.&amp;quot;,&amp;quot;&amp;hellip;.&amp;quot;,&amp;quot;..&amp;quot;,&amp;quot;.&amp;mdash;&amp;quot;,&amp;quot;-.-&amp;quot;,&amp;quot;.-..&amp;quot;,&amp;quot;&amp;ndash;&amp;quot;,&amp;quot;-.&amp;quot;,&amp;quot;&amp;mdash;&amp;quot;,&amp;quot;.&amp;ndash;.&amp;quot;,&amp;quot;&amp;ndash;.-&amp;quot;,&amp;quot;.-.&amp;quot;,&amp;quot;&amp;hellip;&amp;quot;,&amp;quot;-&amp;quot;,&amp;quot;..-&amp;quot;,&amp;quot;&amp;hellip;-&amp;quot;,&amp;quot;.&amp;ndash;&amp;quot;,&amp;quot;-..-&amp;quot;,&amp;quot;-.&amp;ndash;&amp;quot;,&amp;quot;&amp;ndash;..&amp;quot;] Given an array of strings words where each word can be written as a concatenation of the Morse code of each letter.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 383. Ransom Note</title>
+      <link>https://mhy1264.github.io/post/leetcode-383/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/leetcode-383/</guid>
+      <description>題目敘述 Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+Each letter in magazine can only be used once in ransomNote.
+解題想法 把 ransomNote 和 magazine 的組成分別放到兩個vector a,b， 如果 b 的每一項都 &amp;lt;= a 就回傳 True ，有一項不符合就回傳 False
+Code class Solution { public: bool canConstruct(string ransomNote, string magazine) { vector&amp;lt;int&amp;gt; a(26, 0), b(26, 0); for (auto x : magazine) b[x - &amp;#39;a&amp;#39;]++; for (auto x : ransomNote) a[x - &amp;#39;a&amp;#39;]++; for (int i = 0; i &amp;lt; 26; i++) { if (a[i] &amp;gt; b[i]) return false; } return true; } }; </description>
+    </item>
+    
+    <item>
+      <title>LeetCode 326. Power of Three</title>
+      <link>https://mhy1264.github.io/post/leetcode-326/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/leetcode-326/</guid>
+      <description>題目敘述 Given an integer n, return true if it is a power of three. Otherwise, return false.
+An integer n is a power of three, if there exists an integer x such that n == 3x.
+解題想法 一直除三就好惹
+Code class Solution { public: bool isPowerOfThree(int n) { if (n == 0) return false; if (n == 1) return true; while (n % 3 == 0) { n /= 3; } return n == 1; } }; </description>
+    </item>
+    
+    <item>
+      <title>Leetcode #34 Find first and last position of element in sorted Array </title>
+      <link>https://mhy1264.github.io/post/leetcode-34/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/leetcode-34/</guid>
+      <description>題目敘述 給你一個排序好的 int array, 和一個 target, 找出第一次和最後一次出現 target 的位置，如果 target 不在 array 裡，就回傳 [-1, -1]
+解題思路 用兩個整數紀錄位置出現的位置，接者在找看target 出現幾次。如果出現一次，就把那兩個位置改成出現的那個位置。如果出現兩次以上的話，先找第一次出現的位置，之後反轉，在找第一次出現的位置，之後回傳即可。
+程式碼 class Solution { public: vector&amp;lt;int&amp;gt; searchRange(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int posit = -1; int posit2 = -1; int n = count(nums.begin(), nums.end(), target); if (n &amp;gt; 0) { posit = find(nums.begin(), nums.end(), target) - nums.begin(); if (n &amp;gt; 1) { // Find the last occurrence of target posit2 = find(nums.rbegin(), nums.</description>
+    </item>
+    
+  </channel>
+</rss>

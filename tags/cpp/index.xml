@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cpp on Huan&#39;s Blog</title>
+    <link>https://mhy1264.github.io/tags/cpp/</link>
+    <description>Recent content in cpp on Huan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Sep 2023 14:52:26 +0800</lastBuildDate><atom:link href="https://mhy1264.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vector 統計某一元素出現的次數&#39;</title>
+      <link>https://mhy1264.github.io/post/cpp-vector-count/</link>
+      <pubDate>Fri, 01 Sep 2023 14:52:26 +0800</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/cpp-vector-count/</guid>
+      <description>可以調用在 algorithm 裡面的 count ，前面有三個參數，分別是 iterator , iterator, 和你要找的值，會回傳一個int, 代表出現的個數
+sample #include &amp;lt;algorithm&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; int main(){ vector&amp;lt;int&amp;gt; nums({1,2,3,4,5,5,6,7,8,9,10}); cout &amp;lt;&amp;lt; count(nums.begin(), nums.end(), 12) &amp;lt;&amp;lt; endl; // 0 cout &amp;lt;&amp;lt; count(nums.begin(), nums.end(), 5) &amp;lt;&amp;lt; endl; // 2 cout &amp;lt;&amp;lt; count(nums.begin(), nums.end(), 2) &amp;lt;&amp;lt; endl; // 1 } reference cpp reference</description>
+    </item>
+    
+  </channel>
+</rss>
