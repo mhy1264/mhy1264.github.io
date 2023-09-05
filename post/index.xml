@@ -63,5 +63,15 @@ Code class Solution { public: bool isPowerOfThree(int n) { if (n == 0) return fa
 程式碼 class Solution { public: vector&amp;lt;int&amp;gt; searchRange(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int posit = -1; int posit2 = -1; int n = count(nums.begin(), nums.end(), target); if (n &amp;gt; 0) { posit = find(nums.begin(), nums.end(), target) - nums.begin(); if (n &amp;gt; 1) { // Find the last occurrence of target posit2 = find(nums.rbegin(), nums.</description>
     </item>
     
+    <item>
+      <title>我的第一篇文章</title>
+      <link>https://mhy1264.github.io/post/my-first/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mhy1264.github.io/post/my-first/</guid>
+      <description>Hi,all 這是我的第一片文章，就特別發一篇文來慶祝好惹
+這裡會放我學習過的東西，或是一些我覺得有趣的東西，大概就是這樣!</description>
+    </item>
+    
   </channel>
 </rss>
